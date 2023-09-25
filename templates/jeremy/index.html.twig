@@ -1,0 +1,24 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Cours{% endblock %}
+
+{% block body %}
+    <div class="container">   
+    <li>Titre</li>
+    <li>Temps</li>
+    <li>Niveau</li>
+    <li>Date de publication/mise à jour</li>
+    </div>
+
+  <div class="example-wrapper">
+    <h1>Et comment il va {{ controller_name }}? ✅</h1>
+
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href="{{ 'C:/Users/Jeremy/Desktop/TP_ADRAR/adrar_classrooms/src/Controller/JeremyController.php'|file_link(0) }}">src/Controller/JeremyController.php</a></code></li>
+        <li>Your template at <code><a href="{{ 'C:/Users/Jeremy/Desktop/TP_ADRAR/adrar_classrooms/templates/jeremy/index.html.twig'|file_link(0) }}">templates/jeremy/index.html.twig</a></code></li>
+    </ul>
+</div>
+
+{% endblock %}

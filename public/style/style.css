@@ -1,0 +1,95 @@
+.container {
+  width: 100%;
+  height: 227px;
+  background: rgba(85, 132, 172, 0.70);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+  .barre_progression {
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 200px solid transparent; 
+  border-right: 200px solid transparent; 
+}
+
+.rectangle {
+  height: 15px;
+  width: calc(100% / 10 - 2px); 
+  background-color: #7c8894;
+  border: 1px solid #000;
+  border-bottom: 3px solid #000; 
+}
+.infos{
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+}
+.titre_chapitre{
+  display: flex;
+  justify-content: center;
+
+}
+
+.container_infos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh; 
+}
+
+.infos {
+  display: flex;
+  align-items: center;
+}
+
+.info {
+  margin-right: 200px; 
+  border-radius: 100px;
+}
+
+.cours p {
+  display: flex;
+text-align: justify;
+border-right: 50px solid transparent;
+border-left: 50px solid transparent;
+}
+
+.boutons{
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 2fr auto 2fr; 
+  grid-template-areas: "temps niveau date"; 
+  gap: 10px; 
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.temps {
+  grid-area: temps; 
+  grid-row: auto;
+}
+
+.niveau {
+  grid-area: niveau; 
+  justify-content: center; 
+}
+
+.date {
+  grid-area: date; 
+  justify-content: flex-end; 
+}
