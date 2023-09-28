@@ -2,58 +2,81 @@
 <html>
 <head>
     <title>{{ chapitreActuel.titre }}</title>
-       <link rel="stylesheet" href="{{ asset('style/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('style/style.css') }}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
+    </style>
 </head>
 <body>
-<div class="container">   
-    <ul>
-        <li class = "temps"><img src = "{{asset("Images/Logo temps.png")}}">Temps</a></li>
-        <li class = "niveau"><img src ="{{asset("Images/Logo Niveau.png")}}">Niveau</a></li>
-        <li class = "date"><img src ="{{asset("Images/Logo PDF.png")}}">Date de publication/mise à jour</a></li>
+    <ul class="container">
+        <li>
+            <img class="temps" src="{{ asset('Images/Logo temps.png')}}">Temps </img>
+            <img class="niveau" src="{{ asset('Images/Logo Niveau.png')}}">Niveau</img>
+            <img class="date" onClick="window.location.href='/je'" src="{{ asset('Images/Logo PDF.png')}}"></img>
+            <p> Date de publication/Mise à jour :  {{ dateMiseAJour.format('d-m-Y') }}</p>
+        </li>
     </ul>
-</div>
+   
+    <div class="barre_progression">
+        <img class = "home" src="{{ asset('Images/Logo Home.png')}}">
+        <span class="rectangle1"></span>
+        <span class="rectangle"></span>
+        <span class="rectangle"></span>
+        <span class="rectangle"></span>
+        <span class="rectangle"></span>
+        <span class="rectangle"></span>
+        <span class="rectangle"></span>
+        <span class="rectangle"></span>
+        <span class="rectangle"></span>
+        <span class="rectangle"></span>
+        <span class="rectangle"></span>
+        <span class="rectangle"></span>
+        <span class="rectangle"></span>
+        <span class="rectangle"></span>
+        <img class = "certif" src="{{ asset('Images/Logo Certification.png') }}">
+    </div>
 
-<div class="container_infos">
-  <div class="infos">
-<h2 class="info">{{ chapitreActuel.titre }}</h2>
-<h3 class="info">Niveau : {{ chapitreActuel.niveau }}</h3>
-<h3 class="info">Date de mise à jour : {{ dateMiseAJour.format('d-m-Y') }}</h3>
-  </div>
-</div>
+    <h3 class="titre_chapitre">Titre du Chapitre</h3>
+    <div class="cours">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id viverra lacus. Pellentesque vitae elit
+            pharetra, aliquet nibh non, varius sapien. Nullam ac purus a metus laoreet scelerisque. Fusce ullamcorper
+            ornare ligula, vitae bibendum felis auctor nec. Donec vestibulum, lorem eu venenatis egestas, nulla libero
+            maximus risus, eget sollicitudin felis arcu eu erat. Aliquam erat volutpat. Fusce ac lorem sed leo
+            elementum placerat. Fusce feugiat, elit eget ornare fringilla, nisl mi sodales risus, sed volutpat nibh
+            elit eget nunc. Sed sed metus dictum, rhoncus ipsum vulputate, tempus nisl.
+            Donec pulvinar aliquam turpis ac varius. Donec posuere quis augue non interdum. Maecenas vehicula sapien
+            nulla, placerat congue tortor consequat et. Proin tincidunt quam ac eleifend rutrum. Donec vel aliquet
+            ligula, ac interdum purus. Nam sem tellus, accumsan nec vehicula at, feugiat vitae orci. Quisque porttitor
+            nunc nisl, in ultricies velit condimentum ac.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id viverra lacus. Pellentesque vitae elit
+            pharetra, aliquet nibh non, varius sapien. Nullam ac purus a metus laoreet scelerisque. Fusce ullamcorper
+            ornare ligula, vitae bibendum felis auctor nec. Donec vestibulum, lorem eu venenatis egestas, nulla libero
+            maximus risus, eget sollicitudin felis arcu eu erat. Aliquam erat volutpat. Fusce ac lorem sed leo
+            elementum placerat. Fusce feugiat, elit eget ornare fringilla, nisl mi sodales risus, sed volutpat nibh
+            elit eget nunc. Sed sed metus dictum, rhoncus ipsum vulputate, tempus nisl.
+            Donec pulvinar aliquam turpis ac varius. Donec posuere quis augue non interdum. Maecenas vehicula sapien
+            nulla, placerat congue tortor consequat et. Proin tincidunt quam ac eleifend rutrum. Donec vel aliquet
+            ligula, ac interdum purus. Nam sem tellus, accumsan nec vehicula at, feugiat vitae orci. Quisque porttitor
+            nunc nisl, in ultricies velit condimentum ac.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id viverra lacus. Pellentesque vitae elit
+            pharetra, aliquet nibh non, varius sapien. Nullam ac purus a metus laoreet scelerisque. Fusce ullamcorper
+            ornare ligula, vitae bibendum felis auctor nec. Donec vestibulum, lorem eu venenatis egestas, nulla libero
+            maximus risus, eget sollicitudin felis arcu eu erat. Aliquam erat volutpat. Fusce ac lorem sed leo
+            elementum placerat. Fusce feugiat, elit eget ornare fringilla, nisl mi sodales risus, sed volutpat nibh
+            elit eget nunc. Sed sed metus dictum, rhoncus ipsum vulputate, tempus nisl.
+            Donec pulvinar aliquam turpis ac varius. Donec posuere quis augue non interdum. Maecenas vehicula sapien
+            nulla, placerat congue tortor consequat et. Proin tincidunt quam ac eleifend rutrum. Donec vel aliquet
+            ligula, ac interdum purus. Nam sem tellus, accumsan nec vehicula at, feugiat vitae orci. Quisque porttitor
+            nunc nisl, in ultricies velit condimentum ac.
+        </p>
+    </div>
 
-<div class="barre_progression">
-<img src ="{{asset("Images/Logo Home.png")}}">
-  <span class="rectangle"></span>
-  <span class="rectangle"></span>
-  <span class="rectangle"></span>
-  <span class="rectangle"></span>
-  <span class="rectangle"></span>
-  <span class="rectangle"></span>
-  <span class="rectangle"></span>
-  <span class="rectangle"></span>
-  <span class="rectangle"></span>
-  <span class="rectangle"></span>
-  <span class="rectangle"></span>
-  <span class="rectangle"></span>
-  <span class="rectangle"></span>
-  <span class="rectangle"></span>
-<img src ="{{asset("Images/Logo Certification.png")}}">
-</div>
-
-</div>
-
-<h3 class = "titre_chapitre"> Titre du Chapitre </h3>
-<div class="cours">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id viverra lacus. Pellentesque vitae elit pharetra, aliquet nibh non, varius sapien. Nullam ac purus a metus laoreet scelerisque. Fusce ullamcorper ornare ligula, vitae bibendum felis auctor nec. Donec vestibulum, lorem eu venenatis egestas, nulla libero maximus risus, eget sollicitudin felis arcu eu erat. Aliquam erat volutpat. Fusce ac lorem sed leo elementum placerat. Fusce feugiat, elit eget ornare fringilla, nisl mi sodales risus, sed volutpat nibh elit eget nunc. Sed sed metus dictum, rhoncus ipsum vulputate, tempus nisl. 
-Donec pulvinar aliquam turpis ac varius. Donec posuere quis augue non interdum. Maecenas vehicula sapien nulla, placerat congue tortor consequat et. Proin tincidunt quam ac eleifend rutrum. Donec vel aliquet ligula, ac interdum purus. Nam sem tellus, accumsan nec vehicula at, feugiat vitae orci. Quisque porttitor nunc nisl, in ultricies velit condimentum ac.
-</p>
-</div>
-
- <form class = "boutons" method="POST"> 
-    <button class = "bouton_principal" type="submit">Revenir au chapitre précédent</button>
-     <button class = "bouton" type="submit">Je valide ce chapitre et je passe au suivant</button>
-       <button class = "bouton" type="submit">Passer au chapitre suivant</button>
-</form> 
+    <form class="boutons" method="POST">
+        <button class="btn">Revenir au chapitre précédent <img src="https://www.htmlcssbuttongenerator.com/iconExample-search-thin.svg" style="width: 22px; margin-left: 0px; margin-right: 10px; flex-direction: row-reverse;"></button>
+        <button class="btn">Je valide ce chapitre et je passe au suivant <img src="https://www.htmlcssbuttongenerator.com/iconExample-search-thin.svg" style="width: 22px; margin-left: 0px; margin-right: 10px; flex-direction: row-reverse;"></button>
+        <button class="btn">Passer au chapitre suivant <img src="https://www.htmlcssbuttongenerator.com/iconExample-search-thin.svg" style="width: 22px; margin-left: 0px; margin-right: 10px; flex-direction: row-reverse;"></button>
+    </form>
 
 </body>
 </html>
